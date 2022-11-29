@@ -23,6 +23,8 @@ function zaustavi(){
     nizMerenja.push(merenje);
     console.log(nizMerenja);
     merenje = 0;
+    dugme.classList.remove("nevidljivo");
+
 }
 
 function zeleno(){
@@ -34,7 +36,6 @@ function zeleno(){
     }
     polje.addEventListener("click", zaustavi);
 }
-
 
 function kreni(){
     rezultat.innerHTML = "Cekaj za zeleno";
