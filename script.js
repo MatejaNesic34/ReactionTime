@@ -6,7 +6,9 @@ let nizMerenja = [];
 let merenje = 0;
 
 let intervali = [];
-
+function pocetno(){
+    polje.classList.remove('zeleno')
+}
 
 function meri(){
     merenje++;
@@ -24,7 +26,6 @@ function zaustavi(){
     console.log(nizMerenja);
     merenje = 0;
     dugme.classList.remove("nevidljivo");
-
 }
 
 function zeleno(){
@@ -38,12 +39,11 @@ function zeleno(){
 }
 
 function kreni(){
-    rezultat.innerHTML = "Cekaj za zeleno";
+    pocetno();
+    polje.classList.add("crveno");
+    rezultat.innerHTML = "Wait for green";
     let cekanje = Math.floor(Math.random() * 30);
     cekanje = cekanje * 100 + 2000;
     dugme.classList.add("nevidljivo")
-    polje.classList.add("crveno");
-    setTimeout(zeleno, cekanje);
-
-    
+    setTimeout(zeleno, cekanje);  
 }
